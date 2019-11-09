@@ -1,0 +1,6 @@
+export const MSG_ADD_TO_CART_SUCCESS = "MUA HÀNG THÀNH CÔNG";
+export const MSG_UPDATE_CART_SUCCESS = "CAP NHẬT GIỎ HÀNG THÀNH CÔNG";
+export const MSG_DELETE_PRODUCT_IN_CART_SUCCESS =
+  "XÓA SẢN PHẨM KHOẢI GIỎ HÀNG THÀNH CÔNG";
+export const MSG_CART_EMPTY = "CHƯA CÓ SẢN PHẨM NÀO TRONG GIỎ HÀNG";
+export const MSG_WELCOM = "CHÀO MỪNG ĐẾN VỚI SHOP CỦA HÀO";
