@@ -13,6 +13,18 @@ initialState = [
       rating: 4
     },
     quantity: 5
+  },
+  {
+    product: {
+      id: 3,
+      name: "ip",
+      image: "../img/gai/g3.jpg",
+      description: "product by appel make it",
+      price: 200,
+      inventory: 10,
+      rating: 3
+    },
+    quantity: 10
   }
 ];
 const cart = (state = initialState, action) => {
