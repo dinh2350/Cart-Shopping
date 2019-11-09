@@ -2,34 +2,37 @@ let initialState = [
   {
     id: 1,
     name: "ip",
-    image: "lay tren mang",
+    image: "../img/gai/g1.jpg",
     description: "product by appel make it",
     price: 500,
-    inventory: 10
+    inventory: 10,
+    rating: 4
   },
   {
     id: 2,
     name: "ip",
-    image: "lay tren mang",
+    image: "../img/gai/g2.jpg",
     description: "product by appel make it",
-    price: 500,
-    inventory: 10
+    price: 100,
+    inventory: 10,
+    rating: 2
   },
   {
     id: 3,
     name: "ip",
-    image: "lay tren mang",
+    image: "../img/gai/g3.jpg",
     description: "product by appel make it",
-    price: 500,
-    inventory: 10
+    price: 200,
+    inventory: 10,
+    rating: 3
   }
 ];
 
-const product = (state = initialState, action) => {
+const products = (state = initialState, action) => {
   switch (action.type) {
     default:
       return state;
   }
 };
 
-export default product;
+export default products;

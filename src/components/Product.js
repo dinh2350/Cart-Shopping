@@ -2,47 +2,28 @@ import React from "react";
 
 class Product extends React.Component {
   render() {
+    let { product } = this.props;
     return (
       <div className="col-lg-4 col-md-6 mb-r">
         <div className="card text-center card-cascade narrower">
           <div className="view overlay hm-white-slight z-depth-1">
-            <img
-              src="https://store.storeimages.cdn-apple.com/4974/as-images.apple.com/is/image/AppleInc/aos/published/images/H/H0/HH0H2/HH0H2?wid=445&hei=445&fmt=jpeg&qlt=95&op_sharpen=0&resMode=bicub&op_usm=0.5,0.5,0,0&iccEmbed=0&layer=comp&.v=K7ik72"
-              className="img-fluid"
-              alt=""
-            />
-            <a>
+            <img src={product.image} className="img-fluid" alt={product.name} />
+            <i>
               <div className="mask waves-light waves-effect waves-light"></div>
-            </a>
+            </i>
           </div>
           <div className="card-body">
             <h4 className="card-title">
               <strong>
-                <a>Iphone 6 Plus</a>
+                <i>{product.name}</i>
               </strong>
             </h4>
-            <ul className="rating">
-              <li>
-                <i className="fa fa-star"></i>
-              </li>
-              <li>
-                <i className="fa fa-star"></i>
-              </li>
-              <li>
-                <i className="fa fa-star"></i>
-              </li>
-              <li>
-                <i className="fa fa-star"></i>
-              </li>
-              <li>
-                <i className="fa fa-star"></i>
-              </li>
-            </ul>
-            <p className="card-text">Sản phẩm do apply sản xuất</p>
+            <ul className="rating">{this.showRating(product.rating)}</ul>
+            <p className="card-text">{product.description}</p>
             <div className="card-footer">
-              <span className="left">15$</span>
+              <span className="left">{product.price}</span>
               <span className="right">
-                <a
+                <button
                   className="btn-floating blue-gradient"
                   data-toggle="tooltip"
                   data-placement="top"
@@ -50,7 +31,7 @@ class Product extends React.Component {
                   data-original-title="Add to Cart"
                 >
                   <i className="fa fa-shopping-cart"></i>
-                </a>
+                </button>
               </span>
             </div>
           </div>
@@ -58,6 +39,26 @@ class Product extends React.Component {
       </div>
     );
   }
+
+  showRating = rating => {
+    let randomString = require("random-string");
+    let result = [];
+    for (let i = 1; i <= rating; i++) {
+      result.push(
+        <React.Fragment key={randomString({ length: 20 })}>
+          <i className="fa fa-star"></i>
+        </React.Fragment>
+      );
+    }
+    for (let j = 1; j <= 5 - rating; j++) {
+      result.push(
+        <React.Fragment key={randomString({ length: 19 })}>
+          <i className="fa fa-star-o"></i>
+        </React.Fragment>
+      );
+    }
+    return result;
+  };
 }
 
 export default Product;
