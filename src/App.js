@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./components/Header";
 import Message from "./components/Message";
-import Carts from "./components/Carts";
+import CartContainer from "./containers/CartContainer";
 import Footer from "./components/Footer";
 import ProductsContainer from "./containers/ProductsContainer";
 function App() {
@@ -12,7 +12,7 @@ function App() {
         <div className="container">
           <ProductsContainer />
           <Message />
-          <Carts />
+          <CartContainer />
         </div>
       </main>
       <Footer />
