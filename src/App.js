@@ -4,13 +4,14 @@ import Header from "./components/Header";
 import Message from "./components/Message";
 import Carts from "./components/Carts";
 import Footer from "./components/Footer";
+import ProductsContainer from "./containers/ProductsContainer";
 function App() {
   return (
     <div>
       <Header />
       <main id="mainContainer">
         <div className="container">
-          <Products />
+          <ProductsContainer />
           <Message />
           <Carts />
         </div>
