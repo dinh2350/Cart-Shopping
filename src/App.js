@@ -1,5 +1,4 @@
 import React from "react";
-import Products from "./components/Products";
 import Header from "./components/Header";
 import Message from "./components/Message";
 import Carts from "./components/Carts";
