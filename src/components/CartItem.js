@@ -3,7 +3,6 @@ import React from "react";
 class CartItem extends React.Component {
   render() {
     let { item } = this.props;
-    console.log(item);
     return (
       <tr>
         <th scope="row">
