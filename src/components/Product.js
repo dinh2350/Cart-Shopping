@@ -24,6 +24,7 @@ class Product extends React.Component {
               <span className="left">{product.price}</span>
               <span className="right">
                 <button
+                  onClick={() => this.onAddToCart(product)}
                   className="btn-floating blue-gradient"
                   data-toggle="tooltip"
                   data-placement="top"
@@ -39,6 +40,10 @@ class Product extends React.Component {
       </div>
     );
   }
+
+  onAddToCart = product => {
+    this.props.onAddToCart(product);
+  };
 
   showRating = rating => {
     let randomString = require("random-string");
